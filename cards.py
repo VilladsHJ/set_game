@@ -21,16 +21,16 @@ class Cards():
         
         attribute_number_list = [1,2,3] # Each characteric have 3 attributes
         card_num = 0
-        for number in attribute_number_list:
-            numb = self.amount[number-1]
-            for shading in attribute_number_list:
-                shad = self.shadings[shading-1]
+        for shape in attribute_number_list:
+            shap = self.shapes[shape-1]
+            for number in attribute_number_list:
+                numb = self.amount[number-1]
                 for color in attribute_number_list:
                     col = self.colors[color-1]
-                    for shape in attribute_number_list:
-                        shap = self.shapes[shape-1]
+                    for shading in attribute_number_list:
+                        shad = self.shadings[shading-1]
                         card_num += 1
-                        card = {numb: number, shad: shading, col: color, shap: shape}
+                        card = {shap: shape, numb: number, col: color, shad: shading}
                         self.deck[card_num] = card
 
     def cards_in_deck(self):
